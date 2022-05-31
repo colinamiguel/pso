@@ -18,12 +18,12 @@ public class Boss extends Thread{
     private Boolean updated_counter;
     private Integer hour_counter;
     public Integer wage;
-    Simulation simulation;
     public Semaphore boss_manager_semaphore;
+    public Simulation simulation;
     
     public Boss(Integer hourly_wage, Integer worked_hours, int id, Boolean hired,
-                Integer counter, Semaphore counter_semaphore, Simulation simulation,
-                Semaphore boss_manager_semaphore){
+                Integer counter, Semaphore counter_semaphore,
+                Semaphore boss_manager_semaphore, Simulation simulation){
         
         this.status = status;
         this.hourly_wage = hourly_wage;
@@ -36,6 +36,7 @@ public class Boss extends Thread{
         this.counter_semaphore = counter_semaphore;
         this.wage = 0;
         this.boss_manager_semaphore = boss_manager_semaphore;
+        this.simulation = simulation;
     }
     
     @Override
@@ -46,20 +47,28 @@ public class Boss extends Thread{
             
             if(this.updated_counter == false ){
                 
-                this.status = "ocioso";
+                this.status = "Ocioso";
+                this.simulation.boss_status_label.setText(this.status);
                 System.out.println("El jefe esta ocioso.");
                 
                 
                 try{
                     
+                    boss_manager_semaphore.acquire(1);
                     counter_semaphore.acquire();
                     this.status = "Revisando contador";
+                    this.simulation.boss_status_label.setText(this.status);
+                    
+                   
+                    
                     this.counter = this.counter - 1;
                     System.out.println("El jefe está actualizando el contador.");
+                    this.simulation.boss_status_label.setText(this.status);
                     Thread.sleep(1000*7);
                     this.hour_counter = this.hour_counter - (1000*7);
                     this.updated_counter = true;
                     counter_semaphore.release(); 
+                    boss_manager_semaphore.release();
                     
                     this.status = "ocioso";
                     System.out.println("ocioso");
@@ -74,6 +83,7 @@ public class Boss extends Thread{
                 try {
                     boss_manager_semaphore.acquire(1);
                     this.status = "Jugando";
+                    this.simulation.boss_status_label.setText(this.status);
                     Thread.sleep((1000*21)/60);
                     this.hour_counter = this.hour_counter - ((1000*21)/60);
                     
@@ -82,6 +92,7 @@ public class Boss extends Thread{
                     
                     boss_manager_semaphore.acquire(1);
                     this.status = "Revisando papeles";
+                    this.simulation.boss_status_label.setText(this.status);
                     Thread.sleep((1000*21)/60);
                     this.hour_counter = this.hour_counter - ((1000*21)/60);
                     System.out.println("El jefe esta revisando papeles.");
@@ -89,8 +100,8 @@ public class Boss extends Thread{
                     
                     if (this.hour_counter <= 0) {
                         this.updated_counter = false;
-                        this.worked_hours = this.worked_hours + 24*2;
-                        this.wage = this.wage + (this.hourly_wage*24*2);
+                        this.worked_hours = this.worked_hours + 24;
+                        this.wage = this.wage + (this.hourly_wage*24);
                         this.updated_counter = false;
                         this.hour_counter = 24000;
                     }

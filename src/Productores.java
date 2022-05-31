@@ -14,9 +14,11 @@ public class Productores extends Thread {
     private Boolean hired;
     public String status;
     public Integer wage;
+    public Simulation simulation;
+    public Integer produced_parts;
     
     public Productores(Integer hourly_wage, String type, Integer id, Integer capacity, 
-                       Warehouse warehouse, Integer worked_hours, Semaphore factory_semaphore, Boolean hired){
+                       Warehouse warehouse, Integer worked_hours, Semaphore factory_semaphore, Boolean hired, Simulation simulation){
         this.hourly_wage = hourly_wage;
         this.type = type;
         this.id = id;
@@ -27,6 +29,8 @@ public class Productores extends Thread {
         this.factory_semaphore = factory_semaphore;
         this.status = status;
         this.wage = 0;
+        this.simulation = simulation;
+        this.produced_parts = produced_parts;
     };
 
     public Semaphore getFactory_semaphore() {
@@ -101,33 +105,37 @@ public class Productores extends Thread {
                 this.factory_semaphore = factory_semaphore;
                 this.hired = hired;
                 this.status = "trabajando";
+                warehouse.setType("pantalla");
                 break;
             case "boton":
                 this.hourly_wage = hourly_wage;
-                this.warehouse = this.warehouse;
+                this.warehouse = warehouse;
                 this.worked_hours = worked_hours;
                 this.capacity = capacity;
                 this.factory_semaphore = factory_semaphore;
                 this.hired = hired;
                 this.status = "trabajando";
+                warehouse.setType("boton");
                 break;
             case "pin":
                 this.hourly_wage = hourly_wage;
-                this.warehouse = this.warehouse;
+                this.warehouse = warehouse;
                 this.worked_hours = worked_hours;
                 this.capacity = capacity;
                 this.factory_semaphore = factory_semaphore;
                 this.hired = hired;
                 this.status = "trabajando";
+                warehouse.setType("pin");
                 break;
             case "camara":
                 this.hourly_wage = hourly_wage;
-                this.warehouse = this.warehouse;
+                this.warehouse = warehouse;
                 this.worked_hours = worked_hours;
                 this.capacity = capacity;
                 this.factory_semaphore = factory_semaphore;
                 this.hired = hired;
                 this.status = "trabajando";
+                warehouse.setType("camara");
                 break;
         };
         
@@ -139,10 +147,12 @@ public class Productores extends Thread {
                 
                 Thread.sleep(work_day_hours);
                 factory_semaphore.acquire(1);
-                this.warehouse.add_part(this.capacity);
+                this.warehouse.add_part(this.capacity, this.simulation);
+                this.produced_parts = this.produced_parts +this.capacity;
+                
                 System.out.println(this.id);
                 
-                this.worked_hours = this.worked_hours + 24*2;
+                this.worked_hours = this.worked_hours + 24;
                 this.wage = this.wage + (this.hourly_wage*24);
                 
                 factory_semaphore.release();

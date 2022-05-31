@@ -47,7 +47,7 @@ public class Assemblers extends Thread{
                     assemblers_semaphore.acquire();
                     if (this.screen_warehouse.stock >= 1 & this.button_warehouse.stock >= 1 & 
                     this.camera_warehouse.stock >= 1 & this.pin_warehouse.stock >= 1) {
-                        this.status = "trabajando";
+                        this.status = "Trabajando";
                         
                         this.worked_hours = this.worked_hours + 24*2;
                         this.wage = this.wage + (this.hourly_wage*24*2); 
@@ -63,7 +63,7 @@ public class Assemblers extends Thread{
                         
                         System.out.println("\n " + this.id + " " + this.worked_hours + " " + this.wage+ "\n");
                     }else{
-                        this.status = "ocioso";
+                        this.status = "Ocioso";
                     }
                     
                     assemblers_semaphore.release();

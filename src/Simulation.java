@@ -39,16 +39,36 @@ public class Simulation extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         screen_producer_label = new javax.swing.JLabel();
         button_producer_label = new javax.swing.JLabel();
-        variable_producer_label = new javax.swing.JLabel();
+        number_camera_label = new javax.swing.JLabel();
         pin_producer_label = new javax.swing.JLabel();
-        boss_state_label = new javax.swing.JLabel();
-        manager_state_label = new javax.swing.JLabel();
+        manager_status_label = new javax.swing.JLabel();
+        boss_status_label = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        boss_wage = new javax.swing.JLabel();
         panel3 = new java.awt.Panel();
         jLabel2 = new javax.swing.JLabel();
+        screen_warehouse_current_stock = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        pin_warehouse_current_stock = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        camera_warehouse_current_stock = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        button_warehouse_current_stock = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        button_warehouse_current_stock1 = new javax.swing.JLabel();
+        button_warehouse_current_stock2 = new javax.swing.JLabel();
+        button_warehouse_current_stock3 = new javax.swing.JLabel();
+        button_warehouse_current_stock4 = new javax.swing.JLabel();
         panel4 = new java.awt.Panel();
         Productores1 = new javax.swing.JLabel();
         panel5 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -73,13 +93,12 @@ public class Simulation extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 1075));
 
         panel2.setBackground(new java.awt.Color(153, 153, 153));
 
         Productores.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Productores.setForeground(new java.awt.Color(255, 255, 255));
-        Productores.setText("Empleados");
+        Productores.setText("Estado de Empleados");
 
         jLabel3.setText("Número de productores de pantalla:");
 
@@ -97,13 +116,17 @@ public class Simulation extends javax.swing.JFrame {
 
         button_producer_label.setText("N/A");
 
-        variable_producer_label.setText("N/A");
+        number_camera_label.setText("N/A");
 
         pin_producer_label.setText("N/A");
 
-        boss_state_label.setText("N/A");
+        manager_status_label.setText("N/A");
 
-        manager_state_label.setText("N/A");
+        boss_status_label.setText("N/A");
+
+        jLabel19.setText("Sueldo del jefe:");
+
+        boss_wage.setText("N/A");
 
         javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
         panel2.setLayout(panel2Layout);
@@ -114,10 +137,6 @@ public class Simulation extends javax.swing.JFrame {
                     .addGroup(panel2Layout.createSequentialGroup()
                         .addGap(190, 190, 190)
                         .addComponent(Productores))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4)
-                        .addGap(60, 60, 60))
                     .addGroup(panel2Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,15 +145,18 @@ public class Simulation extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4))))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(screen_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(button_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(variable_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(number_camera_label, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pin_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(boss_state_label, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(manager_state_label, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(manager_status_label, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(boss_status_label, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(boss_wage, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(108, 108, 108))
         );
         panel2Layout.setVerticalGroup(
@@ -142,7 +164,7 @@ public class Simulation extends javax.swing.JFrame {
             .addGroup(panel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(Productores)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(screen_producer_label))
@@ -153,50 +175,154 @@ public class Simulation extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(variable_producer_label))
+                    .addComponent(number_camera_label))
                 .addGap(18, 18, 18)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(pin_producer_label))
                 .addGap(30, 30, 30)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(boss_state_label))
+                    .addComponent(manager_status_label)
+                    .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(manager_state_label))
-                .addContainerGap(88, Short.MAX_VALUE))
+                    .addComponent(boss_status_label)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(boss_wage))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         panel3.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Almacenes");
+        jLabel2.setText("Estado de Almacenes");
+
+        screen_warehouse_current_stock.setText("0");
+
+        jLabel9.setText("Stock actual del almacén de pantallas: ");
+
+        jLabel10.setText("Stock actual del almacén de pines: ");
+
+        pin_warehouse_current_stock.setText("0");
+
+        jLabel11.setText("Stock actual del almacén de cámaras: ");
+
+        camera_warehouse_current_stock.setText("0");
+
+        jLabel12.setText("Stock actual del almacén de botones: ");
+
+        button_warehouse_current_stock.setText("0");
+
+        jLabel15.setText("Capacidad actual del almacén de botones: ");
+
+        jLabel16.setText("Capacidad actual del almacén de pines: ");
+
+        jLabel17.setText("Capacidad actual del almacén de pantallas: ");
+
+        jLabel18.setText("Capacidad actual del almacén de cámaras: ");
+
+        button_warehouse_current_stock1.setText("0");
+
+        button_warehouse_current_stock2.setText("0");
+
+        button_warehouse_current_stock3.setText("0");
+
+        button_warehouse_current_stock4.setText("0");
 
         javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
         panel3.setLayout(panel3Layout);
         panel3Layout.setHorizontalGroup(
             panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
+            .addGroup(panel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(188, 188, 188))
+            .addGroup(panel3Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button_warehouse_current_stock4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button_warehouse_current_stock3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button_warehouse_current_stock2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button_warehouse_current_stock1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button_warehouse_current_stock, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(camera_warehouse_current_stock, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pin_warehouse_current_stock, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
+                        .addComponent(screen_warehouse_current_stock, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(62, 62, 62))
         );
         panel3Layout.setVerticalGroup(
             panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel2)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(screen_warehouse_current_stock)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(pin_warehouse_current_stock))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(camera_warehouse_current_stock))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(button_warehouse_current_stock))
+                .addGap(27, 27, 27)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(button_warehouse_current_stock1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(button_warehouse_current_stock2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(button_warehouse_current_stock3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(button_warehouse_current_stock4))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         panel4.setBackground(new java.awt.Color(153, 153, 153));
 
         Productores1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Productores1.setForeground(new java.awt.Color(255, 255, 255));
-        Productores1.setText("Gastos");
+        Productores1.setText("Egresos");
 
         javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
         panel4.setLayout(panel4Layout);
@@ -238,25 +364,40 @@ public class Simulation extends javax.swing.JFrame {
                 .addContainerGap(325, Short.MAX_VALUE))
         );
 
+        jLabel13.setText("Días restantes para entrega de lote:");
+
+        jLabel14.setText("N/A");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(302, 302, 302)
+                        .addComponent(jLabel13)
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel14))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14))
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -264,7 +405,7 @@ public class Simulation extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -308,11 +449,28 @@ public class Simulation extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Productores;
     private javax.swing.JLabel Productores1;
-    public javax.swing.JLabel boss_state_label;
-    private javax.swing.JLabel button_producer_label;
+    public javax.swing.JLabel boss_status_label;
+    public javax.swing.JLabel boss_wage;
+    public javax.swing.JLabel button_producer_label;
+    public javax.swing.JLabel button_warehouse_current_stock;
+    public javax.swing.JLabel button_warehouse_current_stock1;
+    public javax.swing.JLabel button_warehouse_current_stock2;
+    public javax.swing.JLabel button_warehouse_current_stock3;
+    public javax.swing.JLabel button_warehouse_current_stock4;
+    public javax.swing.JLabel camera_warehouse_current_stock;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -320,20 +478,23 @@ public class Simulation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JLabel manager_state_label;
+    public javax.swing.JLabel manager_status_label;
+    public javax.swing.JLabel number_camera_label;
     private java.awt.Panel panel2;
     private java.awt.Panel panel3;
     private java.awt.Panel panel4;
     private java.awt.Panel panel5;
-    private javax.swing.JLabel pin_producer_label;
+    public javax.swing.JLabel pin_producer_label;
+    public javax.swing.JLabel pin_warehouse_current_stock;
     public javax.swing.JLabel screen_producer_label;
-    private javax.swing.JLabel variable_producer_label;
+    public javax.swing.JLabel screen_warehouse_current_stock;
     // End of variables declaration//GEN-END:variables
 
     
     public void jLabelBoss(String text){
-        boss_state_label.setText(text);
+        manager_status_label.setText(text);
     }
 
 }

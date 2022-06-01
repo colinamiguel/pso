@@ -59,9 +59,8 @@ public class Boss extends Thread{
                     this.status = "Revisando contador";
                     this.simulation.boss_status_label.setText(this.status);
                     
-                   
-                    
                     this.counter = this.counter - 1;
+                    this.simulation.days_label.setText(Integer.toString(this.counter));
                     System.out.println("El jefe está actualizando el contador.");
                     this.simulation.boss_status_label.setText(this.status);
                     Thread.sleep(1000*7);
@@ -102,8 +101,13 @@ public class Boss extends Thread{
                         this.updated_counter = false;
                         this.worked_hours = this.worked_hours + 24;
                         this.wage = this.wage + (this.hourly_wage*24);
+                        this.simulation.boss_wage.setText(Integer.toString(this.wage));
                         this.updated_counter = false;
                         this.hour_counter = 24000;
+                    }
+                    
+                    if (this.counter == 0) {
+                        this.status = "Preparando lote.";
                     }
                     
                 } catch (InterruptedException ex) {

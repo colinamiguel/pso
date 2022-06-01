@@ -1,5 +1,11 @@
 
 import java.util.concurrent.Semaphore;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,7 +28,7 @@ public class Interface extends javax.swing.JFrame {
     
     public Interface() {
         
-        
+       
         
         initComponents();
         
@@ -273,12 +279,33 @@ public class Interface extends javax.swing.JFrame {
 
     private void simulateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simulateActionPerformed
         
-
+        Map<String, Integer> config = new HashMap<String, Integer>();
+        
+        config.put("numeroPpantalla", Integer.parseInt(number_of_screen_producers.getModel().getValue().toString()));
+        config.put("numeroPboton", Integer.parseInt(number_of_button_producers.getModel().getValue().toString()));
+        config.put("numeroPpin", Integer.parseInt(number_of_pin_producers.getModel().getValue().toString()));
+        config.put("numeroPcamara", Integer.parseInt(number_of_camera_producers.getModel().getValue().toString()));
+        
+        config.put("capacidadPantalla", Integer.parseInt(screenCapacitySpinner.getModel().getValue().toString()));
+        config.put("capacidadPin", Integer.parseInt(pinCapacitySpinner.getModel().getValue().toString()));
+        config.put("capacidadBoton", Integer.parseInt(buttonCapacitySpinner.getModel().getValue().toString()));
+        config.put("capacidadCamara", Integer.parseInt(cameraCapacitySpinner.getModel().getValue().toString()));
+        
+        config.put("capacidadAlmacenP", Integer.parseInt(screen_warehouse_capacity.getModel().getValue().toString()));
+        config.put("capacidadAlmacenPin", Integer.parseInt(pin_warehouse_capacity.getModel().getValue().toString()));
+        config.put("capacidadAlmacenB", Integer.parseInt(button_warehouse_capacity.getModel().getValue().toString()));
+        config.put("capacidadAlmacenC", Integer.parseInt(camera_warehouse_capacity.getModel().getValue().toString()));
+        
+        config.put("numeroE", Integer.parseInt(number_of_assemblers.getModel().getValue().toString()));
+        
+        config.put("numeroDias", Integer.parseInt(number_of_days.getModel().getValue().toString()));
+        
         
         
         
         Simulation simulation = new Simulation();
-        Factory factory = new Factory(simulation);
+        Counter counter = new Counter(10, 0, 0, 0, 0, 0);
+        Factory factory = new Factory(simulation, counter);
         simulation.setVisible(true);
         factory.start();
         
@@ -381,18 +408,14 @@ public class Interface extends javax.swing.JFrame {
     private java.awt.Panel panel4;
     private javax.swing.JSpinner pinCapacitySpinner;
     private javax.swing.JSpinner pin_warehouse_capacity;
-    private javax.swing.JSpinner screenCapacitySpinner;
+    public javax.swing.JSpinner screenCapacitySpinner;
     private javax.swing.JSpinner screen_warehouse_capacity;
     private javax.swing.JButton simulate;
     private javax.swing.JButton simulate_default;
     private javax.swing.JSpinner workday_hours;
     // End of variables declaration//GEN-END:variables
 
- 
-    public void jbjhhib(){
-    
-    }
-    
+
 }
 
 

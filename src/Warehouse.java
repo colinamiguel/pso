@@ -3,8 +3,8 @@ import java.util.concurrent.Semaphore;
 
 public class Warehouse {
     
-    private Integer size;
-    private String type;
+    public Integer size;
+    public String type;
     public Integer stock;
     public Simulation simulation;
     

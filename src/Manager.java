@@ -54,7 +54,7 @@ public class Manager extends Thread{
                 Thread.sleep((time*1000)/60);
                 if(boss.status == "Jugando" ){
                     boss.wage = boss.wage - 2;
-                    this.simulation.boss_wage.setText(Integer.toString(this.wage));
+                    this.simulation.boss_wage.setText(Integer.toString(boss.wage));
                     System.out.println("Se ha descontado $2 al jefe.");
                     
                 }
@@ -68,7 +68,7 @@ public class Manager extends Thread{
                 
                 this.worked_hours = this.worked_hours + 24;
                 this.wage = this.wage + 180;
-                this.simulation.boss_wage.setText(Integer.toString(this.wage));
+                this.simulation.manager_wage.setText(Integer.toString(this.wage));
                 
             } catch (InterruptedException ex) {
                 Logger.getLogger(Manager.class.getName()).log(Level.SEVERE, null, ex);

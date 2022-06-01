@@ -19,11 +19,13 @@ public class Assemblers extends Thread{
     private Boolean hired;
     public Integer wage;
     public Integer assembled_phones;
+    public Counter counter;
+    public Simulation simulation;
     
     
     public Assemblers(Integer capacity, Integer hourly_wage, Warehouse screen_warehouse,
                       Warehouse button_warehouse, Warehouse camera_warehouse, Warehouse pin_warehouse,
-                      Integer id){
+                      Integer id, Counter counter, Simulation simulation){
         this.capacity = capacity;
         this.hourly_wage = hourly_wage;
         this.worked_hours = 0;
@@ -36,6 +38,8 @@ public class Assemblers extends Thread{
         this.hired = true;
         this.wage = 0;
         this.assembled_phones = 0;
+        this.counter = counter;
+        this.simulation = simulation;
         
     }
     
@@ -60,6 +64,9 @@ public class Assemblers extends Thread{
                         System.out.println("En ensamblador número: " + id + " ha ensamblado un telefono.");
                         
                         this.assembled_phones = this.assembled_phones + 1;
+                        this.counter.phones = this.counter.phones + 1;
+                        this.simulation.phones_p.setText(Integer.toString(this.counter.phones));
+                        
                         
                         System.out.println("\n " + this.id + " " + this.worked_hours + " " + this.wage+ "\n");
                     }else{

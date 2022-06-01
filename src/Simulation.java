@@ -45,6 +45,8 @@ public class Simulation extends javax.swing.JFrame {
         boss_status_label = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         boss_wage = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        manager_wage = new javax.swing.JLabel();
         panel3 = new java.awt.Panel();
         jLabel2 = new javax.swing.JLabel();
         screen_warehouse_current_stock = new javax.swing.JLabel();
@@ -65,10 +67,31 @@ public class Simulation extends javax.swing.JFrame {
         button_warehouse_current_stock4 = new javax.swing.JLabel();
         panel4 = new java.awt.Panel();
         Productores1 = new javax.swing.JLabel();
+        pin_ammount = new javax.swing.JLabel();
+        screen_ammount = new javax.swing.JLabel();
+        button_ammount = new javax.swing.JLabel();
+        camera_ammount = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        pin_expenses = new javax.swing.JLabel();
+        screen_expenses = new javax.swing.JLabel();
+        button_expenses = new javax.swing.JLabel();
+        camera_expenses = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        boss_wage1 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        manager_wage1 = new javax.swing.JLabel();
         panel5 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
+        phones_p = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        days_label = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -128,6 +151,10 @@ public class Simulation extends javax.swing.JFrame {
 
         boss_wage.setText("N/A");
 
+        jLabel20.setText("Sueldo del gerente:");
+
+        manager_wage.setText("N/A");
+
         javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
         panel2.setLayout(panel2Layout);
         panel2Layout.setHorizontalGroup(
@@ -146,9 +173,10 @@ public class Simulation extends javax.swing.JFrame {
                                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel4))))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 34, Short.MAX_VALUE)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(screen_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(button_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -156,7 +184,8 @@ public class Simulation extends javax.swing.JFrame {
                     .addComponent(pin_producer_label, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(manager_status_label, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(boss_status_label, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(boss_wage, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(boss_wage, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(manager_wage, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(108, 108, 108))
         );
         panel2Layout.setVerticalGroup(
@@ -192,6 +221,10 @@ public class Simulation extends javax.swing.JFrame {
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(boss_wage))
+                .addGap(18, 18, 18)
+                .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(manager_wage))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -315,7 +348,7 @@ public class Simulation extends javax.swing.JFrame {
                 .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(button_warehouse_current_stock4))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel4.setBackground(new java.awt.Color(153, 153, 153));
@@ -324,13 +357,97 @@ public class Simulation extends javax.swing.JFrame {
         Productores1.setForeground(new java.awt.Color(255, 255, 255));
         Productores1.setText("Egresos");
 
+        pin_ammount.setText("0");
+
+        screen_ammount.setText("0");
+
+        button_ammount.setText("0");
+
+        camera_ammount.setText("0");
+
+        jLabel14.setText("Pines producidos:");
+
+        jLabel21.setText("Pantallas producidas:");
+
+        jLabel22.setText("Botones producidos");
+
+        jLabel23.setText("Camaras producidas:");
+
+        jLabel24.setText("Egresos por pines:");
+
+        jLabel25.setText("Egresos por pantallas:");
+
+        jLabel26.setText("Egresos por botones:");
+
+        jLabel27.setText("Egresos por cámaras:");
+
+        pin_expenses.setText("0");
+
+        screen_expenses.setText("0");
+
+        button_expenses.setText("0");
+
+        camera_expenses.setText("0");
+
+        jLabel28.setText("Sueldo del jefe:");
+
+        boss_wage1.setText("N/A");
+
+        jLabel29.setText("Sueldo del gerente:");
+
+        manager_wage1.setText("N/A");
+
         javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
         panel4.setLayout(panel4Layout);
         panel4Layout.setHorizontalGroup(
             panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel4Layout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(Productores1)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel4Layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(81, 81, 81)
+                                .addComponent(pin_ammount, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel24))
+                            .addGroup(panel4Layout.createSequentialGroup()
+                                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel21)
+                                    .addComponent(jLabel22)
+                                    .addComponent(jLabel23))
+                                .addGap(63, 63, 63)
+                                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panel4Layout.createSequentialGroup()
+                                        .addComponent(button_ammount, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel26))
+                                    .addGroup(panel4Layout.createSequentialGroup()
+                                        .addComponent(screen_ammount, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel25))
+                                    .addGroup(panel4Layout.createSequentialGroup()
+                                        .addComponent(camera_ammount, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel27))))
+                            .addGroup(panel4Layout.createSequentialGroup()
+                                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boss_wage1))
+                            .addGroup(panel4Layout.createSequentialGroup()
+                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(manager_wage1)))
+                        .addGap(36, 36, 36)
+                        .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(button_expenses, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                            .addComponent(screen_expenses, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pin_expenses, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(camera_expenses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(Productores1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel4Layout.setVerticalGroup(
@@ -338,35 +455,76 @@ public class Simulation extends javax.swing.JFrame {
             .addGroup(panel4Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(Productores1)
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pin_ammount)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel24)
+                    .addComponent(pin_expenses))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(screen_ammount)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel25)
+                    .addComponent(screen_expenses))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button_ammount)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel26)
+                    .addComponent(button_expenses))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(camera_ammount)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel27)
+                    .addComponent(camera_expenses))
+                .addGap(18, 18, 18)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(boss_wage1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(manager_wage1))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         panel5.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Configuración");
+        jLabel1.setText("Teléfonos producidos");
+
+        phones_p.setText("0");
 
         javax.swing.GroupLayout panel5Layout = new javax.swing.GroupLayout(panel5);
         panel5.setLayout(panel5Layout);
         panel5Layout.setHorizontalGroup(
             panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel5Layout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(jLabel1)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addGroup(panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel5Layout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(jLabel1))
+                    .addGroup(panel5Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(phones_p)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel5Layout.setVerticalGroup(
             panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel5Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(phones_p)
+                .addContainerGap(272, Short.MAX_VALUE))
         );
 
         jLabel13.setText("Días restantes para entrega de lote:");
 
-        jLabel14.setText("N/A");
+        days_label.setText("N/A");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -378,17 +536,17 @@ public class Simulation extends javax.swing.JFrame {
                         .addGap(302, 302, 302)
                         .addComponent(jLabel13)
                         .addGap(67, 67, 67)
-                        .addComponent(jLabel14))
+                        .addComponent(days_label))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -396,11 +554,11 @@ public class Simulation extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jLabel14))
+                    .addComponent(days_label))
                 .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -451,13 +609,19 @@ public class Simulation extends javax.swing.JFrame {
     private javax.swing.JLabel Productores1;
     public javax.swing.JLabel boss_status_label;
     public javax.swing.JLabel boss_wage;
+    public javax.swing.JLabel boss_wage1;
+    public javax.swing.JLabel button_ammount;
+    public javax.swing.JLabel button_expenses;
     public javax.swing.JLabel button_producer_label;
     public javax.swing.JLabel button_warehouse_current_stock;
     public javax.swing.JLabel button_warehouse_current_stock1;
     public javax.swing.JLabel button_warehouse_current_stock2;
     public javax.swing.JLabel button_warehouse_current_stock3;
     public javax.swing.JLabel button_warehouse_current_stock4;
+    public javax.swing.JLabel camera_ammount;
+    public javax.swing.JLabel camera_expenses;
     public javax.swing.JLabel camera_warehouse_current_stock;
+    public javax.swing.JLabel days_label;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
@@ -472,6 +636,16 @@ public class Simulation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -481,13 +655,20 @@ public class Simulation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane3;
     public javax.swing.JLabel manager_status_label;
+    public javax.swing.JLabel manager_wage;
+    public javax.swing.JLabel manager_wage1;
     public javax.swing.JLabel number_camera_label;
     private java.awt.Panel panel2;
     private java.awt.Panel panel3;
     private java.awt.Panel panel4;
     private java.awt.Panel panel5;
+    public javax.swing.JLabel phones_p;
+    public javax.swing.JLabel pin_ammount;
+    public javax.swing.JLabel pin_expenses;
     public javax.swing.JLabel pin_producer_label;
     public javax.swing.JLabel pin_warehouse_current_stock;
+    public javax.swing.JLabel screen_ammount;
+    public javax.swing.JLabel screen_expenses;
     public javax.swing.JLabel screen_producer_label;
     public javax.swing.JLabel screen_warehouse_current_stock;
     // End of variables declaration//GEN-END:variables

@@ -58,12 +58,14 @@ public class Warehouse {
     public void add_part(Integer capacity, Simulation simulation){
         if (this.stock + capacity<size) {
             this.stock = this.stock + capacity;
-            System.out.println("Se ha agregado al almacén una pieza de tipo: " + this.type);
+            System.out.println("Se ha agregado al almacén una pieza de tipo: " + this.type + "\n");
+            
             change_text(simulation);
         }else if(this.stock + capacity > size & this.stock < size){
             this.stock = this.stock + capacity - size;
             change_text(simulation);
         }else{
+            this.simulation.messageCenter.append("No se ha podido agregar al almacén una pieza de tipo : " + this.type + ". El almacén de " + this.type + " está a su máxima capacidad." + "\n");
             System.out.println("El almacén " + this.type + " esta a su máxima capacidad.");
             
         }
@@ -73,9 +75,9 @@ public class Warehouse {
         if(this.stock>0){
         this.stock = this.stock - 1;
         change_text(simulation);
-            System.out.println("Se ha extraido del almacén una pieza de tipo: " + this.type);
+            System.out.println("Se ha extraido del almacén una pieza de tipo: " + this.type + ".\n");
         }else{
-            System.out.println("No hay stock en el almacén "+ this.type + ".");
+            System.out.println("No hay stock en el almacén "+ this.type + ".\n");
         }
     }
     
@@ -83,15 +85,19 @@ public class Warehouse {
         switch(this.type){
             case "pantalla":
                 this.simulation.screen_warehouse_current_stock.setText(Integer.toString(this.stock));
+                this.simulation.messageCenter.append("Se ha agregado al almacén una pieza de tipo : " + this.type + ".\n");
                 break;
             case "pin":
                 this.simulation.pin_warehouse_current_stock.setText(Integer.toString(this.stock));
+                this.simulation.messageCenter.append("Se ha agregado al almacén una pieza de tipo : " + this.type + ".\n");
                 break;
             case "camara":
                 this.simulation.camera_warehouse_current_stock.setText(Integer.toString(this.stock));
+                this.simulation.messageCenter.append("Se ha agregado al almacén una pieza de tipo : " + this.type + ".\n");
                 break;
             case "boton":
                 this.simulation.button_warehouse_current_stock.setText(Integer.toString(this.stock));
+                this.simulation.messageCenter.append("Se ha agregado al almacén una pieza de tipo : " + this.type + ".\n");
                 break;
         }
     }

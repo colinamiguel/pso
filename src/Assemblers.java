@@ -47,37 +47,39 @@ public class Assemblers extends Thread{
     public void run(){
         while(this.hired){
             
-                try {
-                    assemblers_semaphore.acquire();
-                    if (this.screen_warehouse.stock >= 1 & this.button_warehouse.stock >= 1 & 
-                    this.camera_warehouse.stock >= 1 & this.pin_warehouse.stock >= 1) {
-                        this.status = "Trabajando";
-                        
-                        this.worked_hours = this.worked_hours + 24*2;
-                        this.wage = this.wage + (this.hourly_wage*24*2); 
-                        
-                        screen_warehouse.remove_part();
-                        camera_warehouse.remove_part();
-                        button_warehouse.remove_part();
-                        pin_warehouse.remove_part();
-                        Thread.sleep(1000*workday_hours*capacity);
-                        System.out.println("En ensamblador número: " + id + " ha ensamblado un telefono.");
-                        
-                        this.assembled_phones = this.assembled_phones + 1;
-                        this.counter.phones = this.counter.phones + 1;
-                        this.simulation.phones_p.setText(Integer.toString(this.counter.phones));
-                        
-                        
-                        System.out.println("\n " + this.id + " " + this.worked_hours + " " + this.wage+ "\n");
-                    }else{
-                        this.status = "Ocioso";
-                    }
-                    
-                    assemblers_semaphore.release();
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Assemblers.class.getName()).log(Level.SEVERE, null, ex);
+            try {
+                assemblers_semaphore.acquire();
+                if (this.screen_warehouse.stock >= 1 & this.button_warehouse.stock >= 2 & 
+                this.camera_warehouse.stock >= 2 & this.pin_warehouse.stock >= 1) {
+                    this.status = "Trabajando";
+
+                    this.worked_hours = this.worked_hours + 24*2;
+                    this.wage = this.wage + (this.hourly_wage*24*2); 
+                    this.counter.assembler_wage_expenses = this.counter.assembler_wage_expenses + this.wage;
+
+                    screen_warehouse.remove_part();
+                    camera_warehouse.remove_part();
+                    button_warehouse.remove_part();
+                    pin_warehouse.remove_part();
+                    Thread.sleep(1000*workday_hours*capacity);
+                    this.simulation.messageCenter.setText("El ensamblador número " + this.id + " ha ensamblado un teléfono.\n");
+                    System.out.println("En ensamblador número: " + id + " ha ensamblado un telefono.");
+
+                    this.assembled_phones = this.assembled_phones + 1;
+                    this.counter.ganancias = this.counter.ganancias + 600;
+                    this.counter.phones = this.counter.phones + 1;
+                    this.simulation.phones_p.setText(Integer.toString(this.counter.phones));
+                    this.simulation.ganancias.setText(Integer.toString(this.counter.ganancias));
+
+                    System.out.println("\n " + this.id + " " + this.worked_hours + " " + this.wage+ "\n");
+                }else{
+                    this.status = "Ocioso";
                 }
-            
+
+                assemblers_semaphore.release();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Assemblers.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     

@@ -11,7 +11,7 @@ public class Productores extends Thread {
     private Integer capacity;
     private Warehouse warehouse;
     private Integer worked_hours;
-    private Boolean hired;
+    public Boolean hired;
     public String status;
     public Integer wage;
     public Simulation simulation;
@@ -160,8 +160,6 @@ public class Productores extends Thread {
             
             try {
                 
-                
-                
                 Thread.sleep(work_day_hours);
                 factory_semaphore.acquire(1);
                 
@@ -169,6 +167,7 @@ public class Productores extends Thread {
                     case "camara":
                         this.warehouse.add_part(this.capacity, this.simulation);
                         this.produced_parts = this.produced_parts + (this.capacity*number_of_camera_producers);
+                        
                         this.simulation.camera_ammount.setText(Integer.toString(this.produced_parts));
                         this.counter.camera_expenses = this.counter.camera_expenses + (this.capacity*8);
                         this.simulation.camera_expenses.setText(Integer.toString(this.counter.camera_expenses));
@@ -196,18 +195,15 @@ public class Productores extends Thread {
                         break;
                 }
                 
-                
-                //this.produced_parts = this.produced_parts +this.capacity;
-                
                 System.out.println(this.id);
                 
                 this.worked_hours = this.worked_hours + 24;
                 this.wage = this.wage + (this.hourly_wage*24);
+                this.counter.producers_wage_expenses = this.counter.producers_wage_expenses + this.wage;
                 
                 factory_semaphore.release();
                 
-                
-            } catch (InterruptedException ex) {
+            }catch (InterruptedException ex){
                 Logger.getLogger(Productores.class.getName()).log(Level.SEVERE, null, ex);
             }
         }

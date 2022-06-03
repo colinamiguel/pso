@@ -1,0 +1,1 @@
+{numeroE=1, capacidadAlmacenPin=1, capacidadAlmacenC=1, numeroPpantalla=1, capacidadAlmacenB=1, capacidadPantalla=1, numeroPpin=1, capacidadAlmacenP=1, capacidadBoton=1, numeroDias=1, capacidadPin=1, numeroPcamara=1, capacidadCamara=1, numeroPboton=1}

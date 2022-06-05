@@ -69,13 +69,13 @@ public class Factory extends Thread{
             simulation.button_warehouse_current_stock3.setText(Integer.toString(screen_warehouse.getSize()));
 
             Warehouse button_warehouse = new Warehouse(Integer.parseInt(data.split(",")[5].split("=")[1]),"botton", 0, simulation);
-            simulation.button_warehouse_current_stock1.setText(Integer.toString(screen_warehouse.getSize()));
+            simulation.button_warehouse_current_stock1.setText(Integer.toString(button_warehouse.getSize()));
 
             Warehouse pin_warehouse = new Warehouse(Integer.parseInt(data.split(",")[2].split("=")[1]),"pin", 0, simulation);
-            simulation.button_warehouse_current_stock2.setText(Integer.toString(screen_warehouse.getSize()));
+            simulation.button_warehouse_current_stock2.setText(Integer.toString(pin_warehouse.getSize()));
 
             Warehouse camera_warehouse = new Warehouse(Integer.parseInt(data.split(",")[3].split("=")[1]),"camara", 0, simulation);
-            simulation.button_warehouse_current_stock4.setText(Integer.toString(screen_warehouse.getSize()));
+            simulation.button_warehouse_current_stock4.setText(Integer.toString(camera_warehouse.getSize()));
 
                 for (int i = 0; i < Integer.parseInt(data.split(",")[4].split("=")[1]); i++) {
                     Productores productor_pantalla = new Productores(3, "pantalla", i+1, Integer.parseInt(data.split(",")[6].split("=")[1]), screen_warehouse, 0, screen_producer_semaphore, true, simulation, 0, counter, number_camera_producers, number_pin_producers, number_button_producers, number_screen_producers, data);

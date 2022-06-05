@@ -81,7 +81,7 @@
     <Component class="javax.swing.JSpinner" name="screenCapacitySpinner">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="3" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -96,7 +96,7 @@
     <Component class="javax.swing.JSpinner" name="buttonCapacitySpinner">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="3" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -108,7 +108,7 @@
     <Component class="javax.swing.JSpinner" name="pinCapacitySpinner">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -132,7 +132,7 @@
     <Component class="javax.swing.JSpinner" name="number_of_screen_producers">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="3" minimum="3" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -144,7 +144,7 @@
     <Component class="javax.swing.JSpinner" name="number_of_button_producers">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="3" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -171,7 +171,7 @@
     <Component class="javax.swing.JSpinner" name="number_of_camera_producers">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="4" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -183,7 +183,7 @@
     <Component class="javax.swing.JSpinner" name="button_warehouse_capacity">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="45" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -195,7 +195,7 @@
     <Component class="javax.swing.JSpinner" name="camera_warehouse_capacity">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="20" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -207,7 +207,7 @@
     <Component class="javax.swing.JSpinner" name="pin_warehouse_capacity">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="15" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -219,7 +219,7 @@
     <Component class="javax.swing.JSpinner" name="screen_warehouse_capacity">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="40" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -231,7 +231,7 @@
     <Component class="javax.swing.JSpinner" name="number_of_assemblers">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="3" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -243,7 +243,7 @@
     <Component class="javax.swing.JSpinner" name="number_of_days">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="14" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>
@@ -255,7 +255,7 @@
     <Component class="javax.swing.JSpinner" name="workday_hours">
       <Properties>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+          <SpinnerModel initial="24" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
       </Properties>
       <Constraints>

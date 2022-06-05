@@ -102,53 +102,52 @@ public class Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 720));
-        setPreferredSize(new java.awt.Dimension(700, 750));
         setSize(new java.awt.Dimension(700, 750));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        screenCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        screenCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
         getContentPane().add(screenCapacitySpinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, -1, -1));
 
-        buttonCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        buttonCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
         getContentPane().add(buttonCapacitySpinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, -1, -1));
 
-        pinCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        pinCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(5, 1, null, 1));
         getContentPane().add(pinCapacitySpinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
 
         cameraCapacitySpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         getContentPane().add(cameraCapacitySpinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, -1, -1));
 
-        number_of_screen_producers.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        number_of_screen_producers.setModel(new javax.swing.SpinnerNumberModel(3, 3, null, 1));
         getContentPane().add(number_of_screen_producers, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, -1, -1));
 
-        number_of_button_producers.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        number_of_button_producers.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
         getContentPane().add(number_of_button_producers, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, -1, -1));
 
         number_of_pin_producers.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         getContentPane().add(number_of_pin_producers, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, -1, -1));
 
-        number_of_camera_producers.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        number_of_camera_producers.setModel(new javax.swing.SpinnerNumberModel(4, 1, null, 1));
         getContentPane().add(number_of_camera_producers, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, -1, -1));
 
-        button_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        button_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(45, 1, null, 1));
         getContentPane().add(button_warehouse_capacity, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 670, -1, -1));
 
-        camera_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        camera_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(20, 1, null, 1));
         getContentPane().add(camera_warehouse_capacity, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 670, -1, -1));
 
-        pin_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        pin_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(15, 1, null, 1));
         getContentPane().add(pin_warehouse_capacity, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 670, -1, -1));
 
-        screen_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        screen_warehouse_capacity.setModel(new javax.swing.SpinnerNumberModel(40, 1, null, 1));
         getContentPane().add(screen_warehouse_capacity, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 670, -1, -1));
 
-        number_of_assemblers.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        number_of_assemblers.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
         getContentPane().add(number_of_assemblers, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 770, -1, -1));
 
-        number_of_days.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        number_of_days.setModel(new javax.swing.SpinnerNumberModel(14, 1, null, 1));
         getContentPane().add(number_of_days, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 860, -1, -1));
 
-        workday_hours.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        workday_hours.setModel(new javax.swing.SpinnerNumberModel(24, 1, null, 1));
         getContentPane().add(workday_hours, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 890, -1, -1));
 
         cancelButton.setText("Cancelar");

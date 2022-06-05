@@ -97,53 +97,56 @@ public class Simulation extends javax.swing.JFrame {
         screen_warehouse_current_stock.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         screen_warehouse_current_stock.setForeground(new java.awt.Color(255, 255, 255));
         screen_warehouse_current_stock.setText("0");
-        getContentPane().add(screen_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 240, 24, -1));
+        getContentPane().add(screen_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 240, 50, -1));
 
         pin_warehouse_current_stock.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         pin_warehouse_current_stock.setForeground(new java.awt.Color(255, 255, 255));
         pin_warehouse_current_stock.setText("0");
-        getContentPane().add(pin_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 270, 24, -1));
+        getContentPane().add(pin_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 270, 50, -1));
 
         camera_warehouse_current_stock.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         camera_warehouse_current_stock.setForeground(new java.awt.Color(255, 255, 255));
         camera_warehouse_current_stock.setText("0");
-        getContentPane().add(camera_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 300, 24, -1));
+        getContentPane().add(camera_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 300, 50, -1));
 
         button_warehouse_current_stock.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_warehouse_current_stock.setForeground(new java.awt.Color(255, 255, 255));
         button_warehouse_current_stock.setText("0");
-        getContentPane().add(button_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 320, 24, -1));
+        getContentPane().add(button_warehouse_current_stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 320, 50, -1));
 
         button_warehouse_current_stock2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_warehouse_current_stock2.setForeground(new java.awt.Color(255, 255, 255));
         button_warehouse_current_stock2.setText("0");
-        getContentPane().add(button_warehouse_current_stock2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 380, 24, -1));
+        getContentPane().add(button_warehouse_current_stock2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 380, 50, -1));
 
         button_warehouse_current_stock3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_warehouse_current_stock3.setForeground(new java.awt.Color(255, 255, 255));
         button_warehouse_current_stock3.setText("0");
-        getContentPane().add(button_warehouse_current_stock3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 400, 24, -1));
+        getContentPane().add(button_warehouse_current_stock3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 400, 50, -1));
 
         button_warehouse_current_stock4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_warehouse_current_stock4.setForeground(new java.awt.Color(255, 255, 255));
         button_warehouse_current_stock4.setText("0");
-        getContentPane().add(button_warehouse_current_stock4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, 24, -1));
+        getContentPane().add(button_warehouse_current_stock4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, 50, -1));
 
         phones_p.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         phones_p.setForeground(new java.awt.Color(255, 255, 255));
+        phones_p.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         phones_p.setText("0");
-        getContentPane().add(phones_p, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 560, -1, -1));
+        getContentPane().add(phones_p, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 560, 90, -1));
 
         ganancias.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ganancias.setForeground(new java.awt.Color(255, 255, 255));
+        ganancias.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ganancias.setText("0");
-        getContentPane().add(ganancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 630, -1, -1));
+        getContentPane().add(ganancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(731, 630, 110, -1));
 
         messageCenter.setColumns(20);
+        messageCenter.setFont(new java.awt.Font("Monospaced", 0, 15)); // NOI18N
         messageCenter.setRows(5);
         jScrollPane1.setViewportView(messageCenter);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 700, 430, 60));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 700, 430, 100));
 
         screen_producer_label.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         screen_producer_label.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,67 +171,67 @@ public class Simulation extends javax.swing.JFrame {
         manager_status_label.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         manager_status_label.setForeground(new java.awt.Color(255, 255, 255));
         manager_status_label.setText("N/A");
-        getContentPane().add(manager_status_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, -1, -1));
+        getContentPane().add(manager_status_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 100, -1));
 
         boss_status_label.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         boss_status_label.setForeground(new java.awt.Color(255, 255, 255));
         boss_status_label.setText("N/A");
-        getContentPane().add(boss_status_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, -1, -1));
+        getContentPane().add(boss_status_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, 100, -1));
 
         boss_wage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         boss_wage.setForeground(new java.awt.Color(255, 255, 255));
         boss_wage.setText("N/A");
-        getContentPane().add(boss_wage, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 740, -1, -1));
+        getContentPane().add(boss_wage, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 740, 60, -1));
 
         manager_wage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         manager_wage.setForeground(new java.awt.Color(255, 255, 255));
         manager_wage.setText("N/A");
-        getContentPane().add(manager_wage, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 760, -1, -1));
+        getContentPane().add(manager_wage, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 760, 60, -1));
 
         pin_expenses.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         pin_expenses.setForeground(new java.awt.Color(255, 255, 255));
         pin_expenses.setText("0");
-        getContentPane().add(pin_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 600, 17, -1));
+        getContentPane().add(pin_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 600, 60, -1));
 
         screen_expenses.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         screen_expenses.setForeground(new java.awt.Color(255, 255, 255));
         screen_expenses.setText("0");
-        getContentPane().add(screen_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 620, 17, -1));
+        getContentPane().add(screen_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 620, 60, -1));
 
         button_expenses.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_expenses.setForeground(new java.awt.Color(255, 255, 255));
         button_expenses.setText("0");
-        getContentPane().add(button_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 650, 17, -1));
+        getContentPane().add(button_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 650, 60, -1));
 
         camera_expenses.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         camera_expenses.setForeground(new java.awt.Color(255, 255, 255));
         camera_expenses.setText("0");
-        getContentPane().add(camera_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 670, 17, -1));
+        getContentPane().add(camera_expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 670, 60, -1));
 
         pin_ammount.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         pin_ammount.setForeground(new java.awt.Color(255, 255, 255));
         pin_ammount.setText("0");
-        getContentPane().add(pin_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 610, 26, -1));
+        getContentPane().add(pin_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 610, 50, -1));
 
         screen_ammount.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         screen_ammount.setForeground(new java.awt.Color(255, 255, 255));
         screen_ammount.setText("0");
-        getContentPane().add(screen_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, 26, -1));
+        getContentPane().add(screen_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, 50, -1));
 
         button_ammount.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_ammount.setForeground(new java.awt.Color(255, 255, 255));
         button_ammount.setText("0");
-        getContentPane().add(button_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 670, 26, -1));
+        getContentPane().add(button_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 670, 50, -1));
 
         camera_ammount.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         camera_ammount.setForeground(new java.awt.Color(255, 255, 255));
         camera_ammount.setText("0");
-        getContentPane().add(camera_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 700, 26, -1));
+        getContentPane().add(camera_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 700, 50, -1));
 
         button_warehouse_current_stock1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         button_warehouse_current_stock1.setForeground(new java.awt.Color(255, 255, 255));
         button_warehouse_current_stock1.setText("0");
-        getContentPane().add(button_warehouse_current_stock1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 350, 20, -1));
+        getContentPane().add(button_warehouse_current_stock1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 350, 50, -1));
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
@@ -317,5 +320,10 @@ public class Simulation extends javax.swing.JFrame {
     public void jLabelBoss(String text){
         manager_status_label.setText(text);
     }
+    
+//    public void fire_producer(Productores producer){
+//        producer.fired();
+//        
+//    }
 
 }

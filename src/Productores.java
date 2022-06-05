@@ -8,7 +8,7 @@ public class Productores extends Thread {
     private Integer hourly_wage;
     private String type;
     public Integer id;
-    private Integer capacity;
+    public Integer capacity;
     private Warehouse warehouse;
     private Integer worked_hours;
     public Boolean hired;
@@ -21,10 +21,11 @@ public class Productores extends Thread {
     public Integer number_of_pin_producers;
     public Integer number_of_button_producers;
     public Integer number_of_screen_producers;
+    public String data;
     
     public Productores(Integer hourly_wage, String type, Integer id, Integer capacity, 
                        Warehouse warehouse, Integer worked_hours, Semaphore factory_semaphore, Boolean hired, Simulation simulation, Integer produced_parts, Counter counter,
-                       Integer number_of_camera_producers, Integer number_of_pin_producers, Integer number_of_button_producers, Integer number_of_screen_producers){
+                       Integer number_of_camera_producers, Integer number_of_pin_producers, Integer number_of_button_producers, Integer number_of_screen_producers, String data){
         this.hourly_wage = hourly_wage;
         this.type = type;
         this.id = id;
@@ -42,6 +43,7 @@ public class Productores extends Thread {
         this.number_of_pin_producers = number_of_pin_producers;
         this.number_of_button_producers = number_of_button_producers;
         this.number_of_screen_producers = number_of_screen_producers;
+        this.data = data;
     };
 
     public Semaphore getFactory_semaphore() {
@@ -118,6 +120,7 @@ public class Productores extends Thread {
                 this.status = "trabajando";
                 warehouse.setType("pantalla");
                 this.produced_parts = produced_parts;
+                this.data = data;
                 break;
             case "boton":
                 this.hourly_wage = hourly_wage;
@@ -129,6 +132,7 @@ public class Productores extends Thread {
                 this.status = "trabajando";
                 warehouse.setType("boton");
                 this.produced_parts = produced_parts;
+                this.data = data;
                 break;
             case "pin":
                 this.hourly_wage = hourly_wage;
@@ -140,6 +144,7 @@ public class Productores extends Thread {
                 this.status = "trabajando";
                 warehouse.setType("pin");
                 this.produced_parts = produced_parts;
+                this.data = data;
                 break;
             case "camara":
                 this.hourly_wage = hourly_wage;
@@ -150,7 +155,8 @@ public class Productores extends Thread {
                 this.hired = hired;
                 this.status = "trabajando";
                 warehouse.setType("camara");
-                this.produced_parts = produced_parts;   
+                this.produced_parts = produced_parts; 
+                this.data = data;
                 break;
         };
         
@@ -165,41 +171,43 @@ public class Productores extends Thread {
                 
                 switch(this.type){
                     case "camara":
-                        this.warehouse.add_part(this.capacity, this.simulation);
-                        this.produced_parts = this.produced_parts + (this.capacity*number_of_camera_producers);
+                        this.warehouse.add_part(this.capacity);
+                        System.out.println(this.capacity);
+                        this.produced_parts = this.produced_parts + (this.capacity);
                         
                         this.simulation.camera_ammount.setText(Integer.toString(this.produced_parts));
-                        this.counter.camera_expenses = this.counter.camera_expenses + (this.capacity*8);
+                        this.counter.camera_expenses = this.counter.camera_expenses + (Integer.parseInt(this.data.split(",")[12].split("=")[1])*8);
                         this.simulation.camera_expenses.setText(Integer.toString(this.counter.camera_expenses));
                         break;
                     case "pin":
-                        this.warehouse.add_part(this.capacity, this.simulation);
-                        this.produced_parts = this.produced_parts + (this.capacity*number_of_pin_producers);
+                        this.warehouse.add_part(this.capacity);
+                        this.produced_parts = this.produced_parts + (this.capacity);
                         this.simulation.pin_ammount.setText(Integer.toString(this.produced_parts));
-                        this.counter.pin_expenses = this.counter.pin_expenses + (this.capacity*3);
+                        this.counter.pin_expenses = this.counter.pin_expenses + (Integer.parseInt(this.data.split(",")[7].split("=")[1])*5);
                         this.simulation.pin_expenses.setText(Integer.toString(this.counter.pin_expenses));
                         break;
                     case "pantalla":
-                        this.warehouse.add_part(this.capacity, this.simulation);
-                        this.produced_parts = this.produced_parts + (this.capacity*number_of_screen_producers);
+                        this.warehouse.add_part(this.capacity);
+                        this.produced_parts = this.produced_parts + (this.capacity);
                         this.simulation.screen_ammount.setText(Integer.toString(this.produced_parts));
-                        this.counter.screen_expenses = this.counter.screen_expenses + (this.capacity*1);
+                        this.counter.screen_expenses = this.counter.screen_expenses + (this.capacity*15);
                         this.simulation.screen_expenses.setText(Integer.toString(this.counter.screen_expenses));
                         break;
                     case "boton":
-                        this.warehouse.add_part(this.capacity, this.simulation);
-                        this.produced_parts = this.produced_parts + (this.capacity*number_of_button_producers);
+                        this.warehouse.add_part(this.capacity);
+                        this.produced_parts = this.produced_parts + (this.capacity);
                         this.simulation.button_ammount.setText(Integer.toString(this.produced_parts));
-                        this.counter.button_expenses = this.counter.button_expenses + (this.capacity*10);
+                        this.counter.button_expenses = this.counter.button_expenses + (Integer.parseInt(data.split(",")[14].split("=")[1].split("}")[0])*10);
                         this.simulation.button_expenses.setText(Integer.toString(this.counter.button_expenses));
                         break;
                 }
                 
-                System.out.println(this.id);
+                
                 
                 this.worked_hours = this.worked_hours + 24;
                 this.wage = this.wage + (this.hourly_wage*24);
                 this.counter.producers_wage_expenses = this.counter.producers_wage_expenses + this.wage;
+               
                 
                 factory_semaphore.release();
                 
@@ -208,4 +216,10 @@ public class Productores extends Thread {
             }
         }
     };
+    
+    public void fired(){
+        this.hired = false;
+        System.out.println("Se ha despedido al empleado de id: " + this.id + ". ************");
+    }
+    
 };

@@ -63,7 +63,6 @@ public class Assemblers extends Thread{
                     pin_warehouse.remove_part();
                     Thread.sleep(1000*workday_hours*capacity);
                     this.simulation.messageCenter.setText("El ensamblador número " + this.id + " ha ensamblado un teléfono.\n");
-                    System.out.println("En ensamblador número: " + id + " ha ensamblado un telefono.");
 
                     this.assembled_phones = this.assembled_phones + 1;
                     this.counter.ganancias = this.counter.ganancias + 600;
@@ -71,7 +70,7 @@ public class Assemblers extends Thread{
                     this.simulation.phones_p.setText(Integer.toString(this.counter.phones));
                     this.simulation.ganancias.setText(Integer.toString(this.counter.ganancias));
 
-                    System.out.println("\n " + this.id + " " + this.worked_hours + " " + this.wage+ "\n");
+                    
                 }else{
                     this.status = "Ocioso";
                 }

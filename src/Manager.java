@@ -63,18 +63,18 @@ public class Manager extends Thread{
                 
                 this.simulation.manager_status_label.setText(this.status);
                 
-                System.out.println("El generente está supervisando al jefe por un tiempo de: " + time);
+                
                 Thread.sleep((time*1000)/60);
                 if(boss.status == "Jugando" ){
                     boss.wage = boss.wage - 2;
                     this.counter.boss_wage_expenses = this.counter.boss_wage_expenses - 2;
                     this.simulation.boss_wage.setText(Integer.toString(boss.wage));
-                    System.out.println("Se ha descontado $2 al jefe.");
+                   
                 }
                 
                 this.manager_semaphore.release();
                 
-                this.status = "Fuera de la fábrica";
+                this.status = "Ocupado";
                 this.simulation.manager_status_label.setText(this.status);
                 
                 Thread.sleep(24000-tiempo*1000);
@@ -84,6 +84,7 @@ public class Manager extends Thread{
                 this.worked_hours = this.worked_hours + 24;
                 this.wage = this.wage + 180;
                 this.counter.boss_wage_expenses = this.counter.boss_wage_expenses + 180;
+                this.counter.manager_wage_expenses = this.counter.manager_wage_expenses + this.wage;
                 this.simulation.manager_wage.setText(Integer.toString(this.wage));
                 
             } catch (InterruptedException ex) {

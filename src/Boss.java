@@ -58,7 +58,7 @@ public class Boss extends Thread{
                 
                 this.status = "Ocioso";
                 this.simulation.boss_status_label.setText(this.status);
-                System.out.println("El jefe esta ocioso.");
+                
                                 
                 try{
                     
@@ -70,10 +70,10 @@ public class Boss extends Thread{
                     //this.counter1 = this.counter1 - 1;
                     this.counter.days = this.counter.days - 1;
                     
-                    System.out.println("\n\n\n" + this.counter.days + "\n\n\n");
+                    
                     
                     this.simulation.days_label.setText(Integer.toString(this.counter.days));
-                    System.out.println("El jefe está actualizando el contador.");
+                    
                     this.simulation.boss_status_label.setText(this.status);
                     Thread.sleep(1000*7);
                     this.hour_counter = this.hour_counter - (1000*7);
@@ -82,7 +82,7 @@ public class Boss extends Thread{
                     boss_manager_semaphore.release();
                     
                     this.status = "ocioso";
-                    System.out.println("ocioso");
+                    
                     
                 }catch (InterruptedException ex) {
                     Logger.getLogger(Boss.class.getName()).log(Level.SEVERE, null, ex);
@@ -98,7 +98,7 @@ public class Boss extends Thread{
                     Thread.sleep((1000*21)/60);
                     this.hour_counter = this.hour_counter - ((1000*21)/60);
                     
-                    System.out.println("El jefe esta jugando.");
+                    
                     boss_manager_semaphore.release(1);
                     
                     boss_manager_semaphore.acquire(1);
@@ -106,7 +106,7 @@ public class Boss extends Thread{
                     this.simulation.boss_status_label.setText(this.status);
                     Thread.sleep((1000*21)/60);
                     this.hour_counter = this.hour_counter - ((1000*21)/60);
-                    System.out.println("El jefe esta revisando papeles.");
+                    
                     boss_manager_semaphore.release(1);
                     
                     if (this.hour_counter <= 0) {
@@ -123,7 +123,7 @@ public class Boss extends Thread{
                     Logger.getLogger(Boss.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
-                if (this.counter1 == 0) {
+                if (this.counter1 == 1) {
                 this.status = "Preparando lote.";
             }
             }

@@ -55,7 +55,7 @@ public class Warehouse {
     }
 
     
-    public void add_part(Integer capacity, Simulation simulation){
+    public void add_part(Integer capacity){
         if (this.stock + capacity<size) {
             this.stock = this.stock + capacity;
             System.out.println("Se ha agregado al almacén una pieza de tipo: " + this.type + "\n");

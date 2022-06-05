@@ -111,10 +111,10 @@ public class Counter {
         stringBuilder.append(data);
         
 //        stringBuilder.append("Telefonos").append(",").append("Salario Jefe").append(",").append("Salario Manager").append(",").append("Salario Ensambladores").append(",").append("Salario productores").append(",")
-//            .append("Gastos pantalla").append(",").append("Gastos botones").append(",").append("Gastos pin").append(",").append("Gastos camara").append("\n");
+//           .append("Gastos pantalla").append(",").append("Gastos botones").append(",").append("Gastos pin").append(",").append("Gastos camara").append(",").append("Ganancias").append("\n");
                 
         stringBuilder.append(Integer.toString(this.phones)).append(",").append(Integer.toString(this.boss_wage_expenses)).append(",").append(Integer.toString(this.manager_wage_expenses)).append(",").append(Integer.toString(this.assembler_wage_expenses)).append(",").append(Integer.toString(this.producers_wage_expenses)).append(",")
-            .append(Integer.toString(this.screen_expenses)).append(",").append(Integer.toString(this.button_expenses)).append(",").append(Integer.toString(this.pin_expenses)).append(",").append(Integer.toString(this.camera_expenses)).append("\n");
+            .append(Integer.toString(this.screen_expenses)).append(",").append(Integer.toString(this.button_expenses)).append(",").append(Integer.toString(this.pin_expenses)).append(",").append(Integer.toString(this.camera_expenses)).append(",").append(Integer.toString(this.ganancias)).append("\n");
         
         //System.out.println(stringBuilder.toString());
 

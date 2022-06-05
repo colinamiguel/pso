@@ -194,13 +194,14 @@ public class Interface extends javax.swing.JFrame {
         String data = "";
         
         try {
-              File file = new File("config.txt");
+              File file = new File("C:/Users/USER/Desktop/config.txt");
               
               Scanner myReader = new Scanner(file);
               while (myReader.hasNextLine()) {
                 data = data + myReader.nextLine();
+                  System.out.println(data);
               }
-               
+
               myReader.close();
              
             } catch (FileNotFoundException e) {
@@ -209,16 +210,19 @@ public class Interface extends javax.swing.JFrame {
             }
         
             String[] pairs = data.split(",");
+            
+            
             for (int i=0;i<pairs.length;i++) {
                 String pair = pairs[i];
-                System.out.println(pairs[i]);
                 String[] keyValue = pair.split("=");
 
                 config.put(keyValue[0], Integer.valueOf(keyValue[1].replace("}", "")));
             }
         
+            
+            
         Simulation simulation = new Simulation();
-        Counter counter = new Counter(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, data, 0);
+        Counter counter = new Counter(Integer.parseInt(number_of_days.getModel().getValue().toString()), 0, 0, 0, 0, 0, 0, 0, 0, 0, data, 0);
         Factory factory = new Factory(simulation, counter, data);
         simulation.setVisible(true);
         factory.start();
@@ -251,6 +255,7 @@ public class Interface extends javax.swing.JFrame {
         config.put("capacidadAlmacenC", Integer.parseInt(camera_warehouse_capacity.getModel().getValue().toString()));
         
         config.put("numeroE", Integer.parseInt(number_of_assemblers.getModel().getValue().toString()));
+        config.put("horas", Integer.parseInt(workday_hours.getModel().getValue().toString()));
         
         config.put("numeroDias", Integer.parseInt(number_of_days.getModel().getValue().toString()));
         
@@ -265,6 +270,8 @@ public class Interface extends javax.swing.JFrame {
           System.out.println("An error occurred.");
           e.printStackTrace();
         }
+        
+        
         
         try {
             FileWriter writer = new FileWriter("C:/Users/USER/Desktop/config.txt");

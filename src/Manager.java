@@ -3,6 +3,7 @@ import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 public class Manager extends Thread{
     
@@ -91,17 +92,25 @@ public class Manager extends Thread{
                 Logger.getLogger(Manager.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            if(this.counter.days == 0 ){
+            if(this.counter.days == 0){
+                this.status = "Preparando pedido.";
+            }
+            
+            if(this.counter.days == -1 ){
                 try {
                     this.status = "Terminó la corrida.";
+                    this.simulation.manager_status_label.setText(this.status);
                     this.counter.writeCsv();
+                    
+                    JOptionPane.showMessageDialog(simulation, "Se ha terminado la simulación con éxito.\nPara ver los resultados, diriíjase al Dashboard.");
                     
                     this.simulation.exit();
                     
-                    this.simulation.manager_status_label.setText(this.status);
+                    
                     
                     this.stopToggle();
                     this.boss.stopToggle();
+                    
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(Manager.class.getName()).log(Level.SEVERE, null, ex);
                 }
